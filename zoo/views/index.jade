@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  div(ng-controller='ZooController')
+    h1 Welcome to {{ title }}
+    ul(ng-if='animals.length > 0')
+      h3 Animals!!
+      li(ng-repeat='animal in animals')
+        p
+          strong Type: {{ animal.type }}: 
+        p Name: {{ animal.name }}
+    div(ng-if="animals.length < 1")
+      p 
+        strong Whoa! you don't have any animals! push the button...
+      div
+        button(ng-click="getMeSomeAnimals()") Get me animals!
