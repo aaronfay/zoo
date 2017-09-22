@@ -1,0 +1,17 @@
+{
+    "apps" : [{
+      "name"        : "zoo-app",
+      "script"      : "www",
+      "watch"       : true,
+      "merge_logs"  : true,
+      "cwd"         : "/root/zoo/zoo/bin/",
+      "env": {
+        "NODE_ENV": "development",
+        "PORT": 3000
+      },
+      "env_production" : {
+         "NODE_ENV": "production",
+         "PORT": 80
+      }
+    }]
+}
